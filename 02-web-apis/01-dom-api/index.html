@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rezeptbuch</title>
+    <!-- Tailwind direkt über das CDN laden: kein Build-Schritt nötig. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- CSS-Klasse aus dem auskommentierten setAttribute-Beispiel. -->
     <style>
       .heading {
@@ -13,9 +15,9 @@
     <!-- defer: Das HTML ist eingelesen, bevor unser Script ausgeführt wird. -->
     <script src="./script.js" defer></script>
   </head>
-  <body>
-    <h1>Rezeptbuch</h1>
+  <body class="min-h-screen bg-stone-100 px-6 py-12 text-stone-800">
+    <h1 class="mx-auto mb-8 max-w-4xl text-4xl font-bold text-emerald-900">Rezeptbuch</h1>
     <!-- Hier fügt JavaScript die Rezeptkarten ein. -->
-    <main></main>
+    <main class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2"></main>
   </body>
 </html>

@@ -38,6 +38,13 @@ const createRecipeCard = (recipe) => {
   const ingredientList = document.createElement('ul');
   const button = document.createElement('button');
 
+  // Tailwind-Klassen gestalten die dynamisch erzeugten Elemente.
+  card.setAttribute('class', 'rounded-2xl border border-stone-200 bg-white p-6 shadow-sm');
+  title.setAttribute('class', 'mb-2 text-2xl font-bold text-emerald-900');
+  time.setAttribute('class', 'mb-5 text-sm text-stone-600');
+  ingredientList.setAttribute('class', 'mt-5 list-disc space-y-1 pl-5 text-stone-700');
+  button.setAttribute('class', 'rounded-lg bg-emerald-700 px-4 py-2 font-semibold text-white hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700');
+
   // Der Event Listener läuft erst beim Klick. Jede Karte hat ihre eigene Liste.
   button.addEventListener('click', (event) => {
     console.log(event); // Das Event-Objekt des Klicks; Details hängen vom Klick und Browser ab.
